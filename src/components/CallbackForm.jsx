@@ -14,6 +14,7 @@ export default function CallbackForm({
   showEmail = false,
   showMessage = false,
   compact = false,
+  source = 'Home Page',
   className = '',
 }) {
   const [status, setStatus] = useState('idle') // idle | loading | success | error
@@ -45,8 +46,7 @@ export default function CallbackForm({
         email: form.email.trim(),
         loanType: form.loanType,
         message: form.message.trim(),
-        // source tag is useful once multiple lead sources land in the same backend
-        source: 'website-callback-form',
+        source: source,
       })
       setStatus('success')
       setForm({ name: '', phone: '', email: '', loanType: LOAN_TYPES[0], message: '' })
