@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Phone, Mail, Linkedin, Building2 } from 'lucide-react'
+import { Phone, Mail, Linkedin, Building2, MapPin } from 'lucide-react'
 import { COMPANY, BANKS } from '../data/content.js'
 
 const FOOTER_LINKS = [
@@ -51,9 +51,11 @@ export default function Footer() {
         {/* Brand */}
         <div className="lg:col-span-2">
           <div className="flex items-center gap-2.5">
-            <span className="grid h-9 w-9 place-items-center rounded-lg bg-white/5 text-gold-400">
-              <Building2 className="h-5 w-5" />
-            </span>
+            <img
+              src="/logo.jpeg"
+              alt="Capital Assist"
+              className="h-9 w-auto rounded-lg object-contain"
+            />
             <span className="font-display text-lg font-extrabold text-white">
               Capital<span className="text-gold-400">Assist</span>
             </span>
@@ -69,6 +71,9 @@ export default function Footer() {
             <a href={COMPANY.linkedin} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-navy-200 hover:text-gold-400">
               <Linkedin className="h-4 w-4" /> LinkedIn
             </a>
+            <p className="inline-flex items-start gap-2 text-navy-200 mt-1">
+              <MapPin className="h-4 w-4 shrink-0 mt-0.5" /> {COMPANY.address}
+            </p>
           </div>
         </div>
 

@@ -39,11 +39,14 @@ export default function Header() {
   return (
     <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${scrolled ? 'glass shadow-nav' : 'bg-transparent'}`}>
       <nav className="container-x flex h-16 md:h-20 items-center justify-between">
-        {/* Logo */}
+        {/* Logo + brand name */}
         <Link to="/" className="group flex items-center gap-2.5" aria-label="Capital Assist home">
-          <span className="grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br from-navy-800 to-navy-950 text-gold-400 shadow-nav">
-            <LogoMark className="h-5 w-5" />
-          </span>
+          {/* Drop your logo file as public/logo.jpeg */}
+          <img
+            src="/logo.jpeg"
+            alt="Capital Assist"
+            className="h-9 md:h-10 w-auto object-contain"
+          />
           <span className={`font-display text-lg font-extrabold tracking-tight transition-colors ${scrolled ? 'text-navy-900' : 'text-white'}`}>
             Capital<span className="text-gold-500">Assist</span>
           </span>
@@ -126,16 +129,3 @@ export default function Header() {
   )
 }
 
-function LogoMark({ className }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
-      <path
-        d="M5 18V6l7 7 7-7v12"
-        stroke="currentColor"
-        strokeWidth="2.2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  )
-}

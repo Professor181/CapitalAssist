@@ -14,15 +14,15 @@ import EMICalculator from '../components/EMICalculator.jsx'
 
 // ─── Quick "How it works" summary (3 condensed steps) ──────────────
 const QUICK_STEPS = [
-  { icon: FileText,      title: 'Share Requirement', desc: 'Tell us your loan need in under 2 minutes.' },
-  { icon: ShieldCheck,    title: 'We Match Lenders', desc: 'Routed to 14+ banks competing for your business.' },
-  { icon: TrendingUp,    title: 'Get Funded',       desc: 'Sanction, paperwork, disbursal — handled end-to-end.' },
+  { icon: FileText,      title: 'Share Your Requirement', desc: 'Tell us what you need in under 2 minutes.' },
+  { icon: ShieldCheck,    title: 'We Match Lenders', desc: 'Your file goes to 14+ banks competing for your business.' },
+  { icon: TrendingUp,    title: 'Get Funded',       desc: 'Sanction, paperwork, disbursal, all handled start to finish.' },
 ]
 
 const STATS = [
   { value: '14+', label: 'Partner Banks & NBFCs' },
   { value: '₹500Cr+', label: 'Finance Facilitated' },
-  { value: '7 Yrs',  label: 'Avg. Advisory Experience' },
+  { value: '9+ Yrs',  label: 'Avg. Advisory Experience' },
   { value: '48 hrs',  label: 'Avg. Response Time' },
 ]
 
@@ -59,7 +59,7 @@ export default function Home() {
               transition={{ duration: 0.55, delay: 0.12 }}
               className="mt-5 max-w-xl text-lg leading-relaxed text-navy-100"
             >
-              From construction equipment to commercial vehicles, working capital, and home loans — we put 14+ leading banks and NBFCs to work for you.
+              From construction equipment to commercial vehicles, working capital, and home loans, we put 14+ leading banks and NBFCs to work for you.
               One application. Better rates. Faster sanctions.
             </motion.p>
 
@@ -115,7 +115,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="How It Works"
             title="Three simple steps from application to disbursal"
-            subtitle="We strip the friction out of lender-side paperwork and rate negotiation, so you can focus on closing your deal."
+            subtitle="We take care of the lender-side paperwork and rate negotiation, so you can focus on closing your deal."
             align="center"
           />
           <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -149,7 +149,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="Finance Engine"
               title="Specialist financing for every stage"
-              subtitle="We move large-ticket loans faster by knowing exactly which lender understands each asset class."
+              subtitle="We move large-ticket loans faster because we know exactly which lender fits each asset class."
             />
             <Link to="/services" className="btn-outline shrink-0">
               All services <ArrowRight className="h-4 w-4" />
@@ -185,7 +185,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="Plan Ahead"
               title="Estimate your EMI in seconds"
-              subtitle="Sliders for loan amount, interest rate, and tenure — outputs update live. Indicative only — final rates are set at sanction."
+              subtitle="Sliders for loan amount, interest rate, and tenure. Outputs update live. These are indicative only; final rates are set at sanction."
             />
             <div className="mt-6 flex flex-wrap gap-3">
               <Link to="/contact" className="btn-gold">Get a custom quote <ArrowRight className="h-4 w-4" /></Link>
@@ -246,7 +246,7 @@ export default function Home() {
                 Ready to move on your next project?
               </h2>
               <p className="mt-3 max-w-xl mx-auto text-navy-100">
-                Get a free consultation today — we’ll show you exactly where you stand with our lender network.
+                Get a free consultation today. We'll show you exactly where you stand with our lender network.
               </p>
               <div className="mt-7 flex flex-wrap justify-center gap-3">
                 <Link to="/contact" className="btn-gold">Request Callback <ArrowRight className="h-4 w-4" /></Link>

@@ -12,32 +12,47 @@ const VALUES = [
   {
     icon: TrendingDown,
     title: 'Better rates',
-    desc: 'When 14+ banks compete for your file, you don’t accept the first quote — you pick the best.',
+    desc: 'When 14+ banks compete for your file, you don\'t have to accept the first offer. You pick the best one.',
   },
   {
     icon: Layers,
     title: 'Higher approval odds',
-    desc: 'Each lender has a different risk appetite. We route your profile where it’s most likely to sanction.',
+    desc: 'Every lender has a different risk appetite. We route your profile to the one most likely to say yes.',
   },
   {
     icon: ShieldCheck,
     title: 'Diversified lenders',
-    desc: 'Banks, NBFCs, and specialist financiers — no single institution can veto your raise.',
+    desc: 'Banks, NBFCs, and specialist financiers. No single institution can block your funding.',
   },
   {
     icon: Handshake,
     title: 'Negotiated terms',
-    desc: 'Leverage across thousands of files means we get rate concessions individuals can’t unlock alone.',
+    desc: 'Our volume across thousands of files means we can negotiate rate concessions you wouldn\'t get on your own.',
   },
 ]
 
-// Reusable bank card — initial of name on a branded chip.
+// Bank logo placeholder URLs (via ui-avatars.com for clean, modern placeholders).
+// Replace these with actual bank logo files once available.
+const BANK_LOGOS = {
+  'HDFC Bank':              'https://ui-avatars.com/api/?name=HDFC&background=0f1b33&color=d9b23e&size=96&bold=true&font-size=0.4',
+  'ICICI Bank':             'https://ui-avatars.com/api/?name=ICICI&background=0f1b33&color=d9b23e&size=96&bold=true&font-size=0.33',
+  'Kotak Mahindra Bank':    'https://ui-avatars.com/api/?name=Kotak&background=0f1b33&color=d9b23e&size=96&bold=true&font-size=0.33',
+  'Axis Bank':              'https://ui-avatars.com/api/?name=Axis&background=0f1b33&color=d9b23e&size=96&bold=true&font-size=0.4',
+  'Yes Bank':               'https://ui-avatars.com/api/?name=YES&background=0f1b33&color=d9b23e&size=96&bold=true&font-size=0.4',
+  'Federal Bank':           'https://ui-avatars.com/api/?name=FB&background=0f1b33&color=d9b23e&size=96&bold=true&font-size=0.4',
+  'IDFC First Bank':        'https://ui-avatars.com/api/?name=IDFC&background=0f1b33&color=d9b23e&size=96&bold=true&font-size=0.4',
+  'Bandhan Bank':           'https://ui-avatars.com/api/?name=BB&background=0f1b33&color=d9b23e&size=96&bold=true&font-size=0.4',
+  'AU Small Finance Bank':  'https://ui-avatars.com/api/?name=AU&background=0f1b33&color=d9b23e&size=96&bold=true&font-size=0.4',
+  'Sundaram Finance':       'https://ui-avatars.com/api/?name=SF&background=0f1b33&color=d9b23e&size=96&bold=true&font-size=0.4',
+  'HDB Financial Services': 'https://ui-avatars.com/api/?name=HDB&background=0f1b33&color=d9b23e&size=96&bold=true&font-size=0.4',
+  'Bajaj Finance':          'https://ui-avatars.com/api/?name=BF&background=0f1b33&color=d9b23e&size=96&bold=true&font-size=0.4',
+  'Tata Capital':           'https://ui-avatars.com/api/?name=TC&background=0f1b33&color=d9b23e&size=96&bold=true&font-size=0.4',
+  'Cholamandalam Finance':  'https://ui-avatars.com/api/?name=Chola&background=0f1b33&color=d9b23e&size=96&bold=true&font-size=0.33',
+}
+
+// Reusable bank card with logo image + name.
 function BankCard({ name, tag, index }) {
-  const initials = name
-    .split(' ')
-    .map((w) => w[0])
-    .slice(0, 2)
-    .join('')
+  const logoSrc = BANK_LOGOS[name] || `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=0f1b33&color=d9b23e&size=96&bold=true&font-size=0.33`
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.92 }}
@@ -46,9 +61,12 @@ function BankCard({ name, tag, index }) {
       transition={{ duration: 0.35, delay: (index % 7) * 0.04 }}
       className="group card p-6 flex items-center gap-4 transition-all hover:-translate-y-1 hover:shadow-nav"
     >
-      <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-navy-gradient text-gold-400 font-display font-bold transition-transform group-hover:scale-105">
-        {initials}
-      </span>
+      {/* Bank logo — replace src with actual logo files when available */}
+      <img
+        src={logoSrc}
+        alt={`${name} logo`}
+        className="h-12 w-12 shrink-0 rounded-xl object-contain"
+      />
       <div className="min-w-0">
         <p className="font-semibold text-navy-900 truncate">{name}</p>
         <p className="text-xs uppercase tracking-wider text-slate2-400">
@@ -67,8 +85,8 @@ export default function Partners() {
     <Page>
       <PageHero
         eyebrow="Our Lender Network"
-        title="14+ banks & NBFCs competing for your business"
-        subtitle="Capital Assist is an authorised channel partner — meaning your file reaches desks most individuals can’t even approach directly."
+        title="14+ banks and NBFCs working to get you the best deal"
+        subtitle="We're an authorised channel partner, so your file reaches desks that most individuals can't approach directly."
         cta={{ to: '/contact', label: 'Get matched with a lender' }}
       />
 
@@ -77,8 +95,8 @@ export default function Partners() {
         <div className="container-x">
           <SectionHeading
             eyebrow="Why It Matters"
-            title="One application, multiple lenders, best outcome"
-            subtitle="The difference between an acceptable rate and the best available rate often comes down to which desk sees your file. We send it to many."
+            title="One application, multiple lenders, the best outcome"
+            subtitle="The gap between an okay rate and the best rate often comes down to which desk sees your file. We make sure many do."
             align="center"
           />
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

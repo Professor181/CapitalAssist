@@ -16,7 +16,7 @@ export default function Services() {
       <PageHero
         eyebrow="Finance Engine"
         title="Specialist financing across asset classes"
-        subtitle="Construction equipment, commercial vehicles, real estate, and working capital — each routed to lenders who understand the underlying cashflow."
+        subtitle="Construction equipment, commercial vehicles, real estate, and working capital. Each routed to lenders who understand the underlying cashflow."
         cta={{ to: '/contact', label: 'Talk to an advisor' }}
       />
 
@@ -65,8 +65,8 @@ export default function Services() {
         <div className="container-x">
           <SectionHeading
             eyebrow="Documentation"
-            title="Know what to bring — for every loan type"
-            subtitle="Pick a service to see the checklist. Have these ready and sanctions move faster."
+            title="Know what to bring for every loan type"
+            subtitle="Pick a service to see the checklist. Having these ready makes the process much faster."
             align="center"
           />
           <div className="mt-12">

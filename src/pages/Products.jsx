@@ -13,12 +13,12 @@ const VALUES = [
   {
     icon: ShieldCheck,
     title: 'Curated, not commissioned',
-    desc: 'We propose what fits your risk profile — not what pays the most commission.',
+    desc: 'We recommend what fits your risk profile, not what pays us the highest commission.',
   },
   {
     icon: ShieldCheck,
     title: 'Trusted insurers & AMCs',
-    desc: 'Only established partners — regulated by IRDAI and SEBI.',
+    desc: 'Only established partners, regulated by IRDAI and SEBI.',
   },
   {
     icon: ShieldCheck,
@@ -32,8 +32,8 @@ export default function Products() {
     <Page>
       <PageHero
         eyebrow="Protection & Wealth"
-        title="Advisory for what’s beyond the loan"
-        subtitle="Insurance that protects the assets you just financed, and disciplined wealth-building that compounds alongside them."
+        title="Advisory for what's beyond the loan"
+        subtitle="Insurance to protect the assets you just financed, and disciplined wealth-building that compounds alongside them."
         cta={{ to: '/contact', label: 'Get advice' }}
       />
 
@@ -42,8 +42,8 @@ export default function Products() {
         <div className="container-x">
           <SectionHeading
             eyebrow="Our Products"
-            title="Three pillars of protection & wealth"
-            subtitle="Each product line is advisory-led: we understand your loan, your business, and your goals before recommending a solution."
+            title="Three pillars of protection and wealth"
+            subtitle="Each product line is advisory-led. We understand your loan, your business, and your goals before recommending anything."
             align="center"
           />
 
@@ -88,7 +88,7 @@ export default function Products() {
           <SectionHeading
             eyebrow="Why Advisory-Led"
             title="The difference between buying a policy and getting it right"
-            subtitle="Off-the-shelf products rarely match the realities of running a fleet, a project, or a household. We bridge that gap."
+            subtitle="Off-the-shelf products rarely match the realities of running a fleet, a project, or a household. We close that gap."
             align="center"
           />
           <div className="mt-12 grid gap-6 md:grid-cols-3">

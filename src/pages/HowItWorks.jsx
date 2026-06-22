@@ -30,7 +30,7 @@ function TimelineStep({ item, index }) {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className={`md:px-2 ${index % 2 === 1 ? 'md:text-left' : 'md:text-right'}`}
         >
-          <span className="font-display text-5xl md:text-6xl font-extrabold text-slate2-100">
+          <span className="font-display text-5xl md:text-6xl font-extrabold text-navy-800/90">
             0{item.step}
           </span>
           <h3 className="mt-2 font-display text-2xl md:text-3xl font-bold text-navy-900">{item.title}</h3>
@@ -72,8 +72,8 @@ export default function HowItWorks() {
     <Page>
       <PageHero
         eyebrow="The Process"
-        title="One pipeline — from application to funding"
-        subtitle="Four steps, each with a clear owner and a clear deliverable. You stay informed; we handle the chaos behind the scenes."
+        title="One clear pipeline from application to funding"
+        subtitle="Four steps, each with a clear owner. You stay in the loop; we handle the heavy lifting."
         cta={{ to: '/contact', label: 'Start your application' }}
       />
 
@@ -91,7 +91,7 @@ export default function HowItWorks() {
           <SectionHeading
             eyebrow="Step-by-step"
             title="Built around clarity"
-            subtitle="Every arrow below stands for a real handoff — tracked end-to-end by your dedicated advisor."
+            subtitle="Every arrow below is a real handoff, tracked end-to-end by your dedicated advisor."
             align="center"
           />
 
@@ -108,15 +108,15 @@ export default function HowItWorks() {
         <div className="container-x section-pad">
           <SectionHeading
             eyebrow="Our Commitment"
-            title="What you can count on, every step of the way"
+            title="What you can count on at every step"
             align="center"
             light
           />
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {[
-              { t: 'Single point of contact', d: 'One advisor from first call to disbursal — no being bounced between teams.' },
-              { t: 'Transparent pricing', d: 'Rate sheets and processing fees disclosed before you sign anything.' },
-              { t: 'Faster turnaround', d: 'Pre-checked files mean lenders see a complete submission the first time.' },
+              { t: 'Single point of contact', d: 'One advisor from the first call to disbursal. No being bounced between teams.' },
+              { t: 'Transparent pricing', d: 'Rate sheets and processing fees shared upfront, before you sign anything.' },
+              { t: 'Faster turnaround', d: 'We pre-check your file so lenders see a complete submission the first time around.' },
             ].map((g, i) => (
               <ScrollReveal key={g.t} delay={i * 0.1}>
                 <div className="h-full rounded-2xl border border-white/10 bg-white/5 p-7 backdrop-blur">
@@ -136,8 +136,8 @@ export default function HowItWorks() {
           <ScrollReveal>
             <SectionHeading
               eyebrow="Start Here"
-              title="It begins with one short form"
-              subtitle="No documents needed yet — just tell us what you’re financing and a good number to reach you. We’ll take it from there."
+              title="It all starts with one short form"
+              subtitle="No documents needed yet. Just tell us what you're financing and a good number to reach you. We'll take it from there."
             />
             <div className="mt-6 flex items-center gap-3 text-sm text-slate2-500">
               <ArrowRight className="h-4 w-4 text-gold-500" /> Avg. response within one business hour.

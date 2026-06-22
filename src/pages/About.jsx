@@ -12,24 +12,20 @@ import { COMPANY, BANKS } from '../data/content.js'
 
 // Core values — three columns.
 const VALUES = [
-  { icon: Award,   title: 'Integrity first',     desc: 'Rates, fees, and conditions disclosed before you sign. No hidden cuts, no surprises.' },
-  { icon: Users,   title: 'Client ownership',     desc: 'One advisor who knows your file end-to-end — not a rotating ticket queue.' },
-  { icon: Target,  title: 'Outcome-driven',      desc: 'We measure ourselves on sanctions, not on how many forms you filled out.' },
+  { icon: Award,   title: 'Integrity first',     desc: 'Rates, fees, and conditions shared upfront, before you sign. No hidden charges, no surprises.' },
+  { icon: Users,   title: 'Client ownership',     desc: 'One advisor who knows your file inside out, not a revolving door of support tickets.' },
+  { icon: Target,  title: 'Outcome-driven',      desc: 'We measure ourselves on sanctions delivered, not on forms filled.' },
 ]
 
-// Placeholder client logos grid — swap with real logos before launch.
-const CLIENTS = [
-  'VRL Logistics', 'Mahindra Group', 'Tata Motors', 'Ashok Leyland',
-  'JCB India', 'L&T Construction', 'Shapoorji Pallonji', 'DLF',
-]
+
 
 export default function About() {
   return (
     <Page>
       <PageHero
         eyebrow="About Capital Assist"
-        title="Built for India’s builders, fleet owners, and businesses"
-        subtitle="We sit between your ambition and the bank — translating paperwork into sanctions, and sanctions into capital."
+        title="Built for India's builders, fleet owners, and businesses"
+        subtitle="We sit between you and the bank, turning paperwork into sanctions and sanctions into capital."
         cta={{ to: '/contact', label: 'Talk to us' }}
       />
 
@@ -41,20 +37,20 @@ export default function About() {
             <h2 className="mt-3 section-title">Specialists, not generalists</h2>
             <div className="mt-5 space-y-4 text-slate2-600 leading-relaxed">
               <p>
-                Capital Assist was founded on a simple observation — that the hardest part of getting a loan
-                isn’t qualifying for it. It’s navigating the paperwork, the right desk, and the right lender
-                for the asset you’re financing.
+                Capital Assist was founded on a simple idea: the hardest part of getting a loan
+                isn't qualifying for it. It's finding the right lender, the right desk, and getting
+                your paperwork across the line.
               </p>
               <p>
-                We chose depth over breadth: a sharp focus on
+                We chose to go deep instead of wide: a sharp focus on
                 <strong className="text-navy-800"> construction equipment</strong> and
                 <strong className="text-navy-800"> commercial vehicle finance</strong>, alongside home loans,
-                working capital, and protection & wealth products. It’s a focus that lets us speak the
-                language of lenders — and structure files they understand.
+                working capital, and protection & wealth products. That focus means we speak the
+                language of lenders and structure files they can work with.
               </p>
               <p>
-                Today, we’re an authorised channel partner of {BANKS.length}+ leading banks and NBFCs, with
-                a track record measured in sanctioned crores, not just enquiries.
+                Today, we're authorised channel partners of {BANKS.length}+ leading banks and NBFCs,
+                with a track record measured in sanctioned crores, not just enquiries.
               </p>
             </div>
           </ScrollReveal>
@@ -74,8 +70,8 @@ export default function About() {
       <section className="section-pad bg-navy-50/50">
         <div className="container-x grid gap-6 md:grid-cols-2">
           {[
-            { icon: Target, title: 'Our Mission', body: 'To make large-ticket finance frictionless — by being the bridge between businesses and the banks that fund them.' },
-            { icon: Eye, title: 'Our Vision', body: 'A lending landscape where every application reaches the desks most likely to sanction it — at the best available rate.' },
+            { icon: Target, title: 'Our Mission', body: 'To make large-ticket finance simple and fast by connecting businesses with the banks best suited to fund them.' },
+            { icon: Eye, title: 'Our Vision', body: 'A lending landscape where every application reaches the desks most likely to approve it, at the best available rate.' },
           ].map((b, i) => (
             <ScrollReveal key={b.title} delay={i * 0.1}>
               <div className="card p-8 h-full">
@@ -111,31 +107,6 @@ export default function About() {
               </ScrollReveal>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ─── Clients (placeholder logo grid) ───────────────── */}
-      <section className="section-pad bg-navy-gradient text-white">
-        <div className="container-x">
-          <SectionHeading
-            eyebrow="Our Clients"
-            title="Trusted by India’s builders"
-            subtitle="A representative sample of the businesses we’ve helped finance. Detailed case studies available on request."
-            align="center"
-            light
-          />
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
-            {CLIENTS.map((c, i) => (
-              <ScrollReveal key={c} delay={(i % 4) * 0.06}>
-                <div className="h-24 rounded-xl border border-white/10 bg-white/5 backdrop-blur grid place-items-center px-4 text-center">
-                  <span className="font-display text-base font-semibold text-navy-100">{c}</span>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-          <p className="mt-8 text-center text-xs text-navy-300">
-            Logos shown for illustration. Replace with verified client artwork before launch.
-          </p>
         </div>
       </section>
 
