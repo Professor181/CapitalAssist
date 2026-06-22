@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-slate2-50 text-navy-900 font-sans antialiased;
+  }
+  ::selection {
+    @apply bg-gold-300 text-navy-900;
+  }
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-slate2-100;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-navy-300 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-navy-500;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  .section-pad {
+    @apply py-16 md:py-24;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  .btn-gold {
+    @apply btn bg-gradient-to-br from-gold-400 to-gold-500 text-navy-900 hover:shadow-glow-gold hover:from-gold-300 hover:to-gold-400 focus:ring-gold-400;
+  }
+  .btn-navy {
+    @apply btn bg-gradient-to-br from-navy-800 to-navy-950 text-white hover:shadow-nav hover:from-navy-700 hover:to-navy-900 focus:ring-navy-700;
+  }
+  .btn-outline {
+    @apply btn border border-navy-200 bg-white text-navy-800 hover:border-navy-400 hover:bg-navy-50 focus:ring-navy-300;
+  }
+  .card {
+    @apply rounded-2xl bg-white shadow-card border border-slate2-100;
+  }
+  .section-title {
+    @apply font-display text-3xl md:text-4xl font-bold tracking-tight text-navy-900;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-gold-600;
+  }
+  .input-field {
+    @apply w-full rounded-lg border border-slate2-300 bg-white px-4 py-3 text-navy-900 placeholder:text-slate2-400 transition-all focus:border-navy-500 focus:outline-none focus:ring-2 focus:ring-navy-500/20;
+  }
+  .glass {
+    @apply bg-white/80 backdrop-blur-xl border-b border-white/60;
+  }
+}
+
+/* Marquee track */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Gradient text */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #d9b23e, #f3e4a6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
